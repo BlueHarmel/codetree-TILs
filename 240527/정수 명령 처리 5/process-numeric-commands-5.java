@@ -8,7 +8,7 @@ public class Main {
 
         List<Integer> arrayList = new ArrayList<>();
 
-        for(int i = 0; i < 9; i++){
+        for(int i = 0; i < N; i++){
             StringTokenizer stk = new StringTokenizer(br.readLine(), " ");
             String order = stk.nextToken();
             
