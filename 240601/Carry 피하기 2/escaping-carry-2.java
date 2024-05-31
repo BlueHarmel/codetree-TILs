@@ -37,10 +37,11 @@ public class Main {
             }
         }
         
+
         Collections.sort(candidateList,Collections.reverseOrder());
         int answer = candidateList.get(0);
 
-        System.out.println(answer==0?-1:answer);
+        System.out.println(candidateList.isEmpty()?-1:answer);
     }
 
     static boolean isCarry(int num1, int num2) {
