@@ -18,8 +18,7 @@ public class Main {
         }
         Collections.sort(numberList, Collections.reverseOrder());
 
-        int answer = 0;
-        Loop1:
+        List<Integer> candidateList = new ArrayList<Integer>();
         for (int i = 0; i<n-2; i++) {
             for (int j = i+1; j<n-1; j++) {
                 //carry 발생여부 확인 후 합계 계산
@@ -31,13 +30,15 @@ public class Main {
                     for (int k = j+1; k<n; k++) {
                         int num3 = numberList.get(k);
                         if(!isCarry(tempSum,num3)) {
-                            answer = tempSum + num3;
-                            break Loop1;
+                            candidateList.add(tempSum + num3);
                         }
                     }
                 }
             }
         }
+        
+        Collections.sort(candidateList,Collections.reverseOrder());
+        int answer = candidateList.get(0);
 
         System.out.println(answer==0?-1:answer);
     }
