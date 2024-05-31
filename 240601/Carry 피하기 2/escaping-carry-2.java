@@ -36,12 +36,13 @@ public class Main {
                 }
             }
         }
-        
+        int answer = -1;
+        if (!candidateList.isEmpty()) {
+            Collections.sort(candidateList,Collections.reverseOrder());
+            answer = candidateList.get(0);
+        }
 
-        Collections.sort(candidateList,Collections.reverseOrder());
-        int answer = candidateList.get(0);
-
-        System.out.println(candidateList.isEmpty()?-1:answer);
+        System.out.println(answer);
     }
 
     static boolean isCarry(int num1, int num2) {
