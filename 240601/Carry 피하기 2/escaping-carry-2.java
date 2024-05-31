@@ -19,6 +19,7 @@ public class Main {
         Collections.sort(numberList, Collections.reverseOrder());
 
         int answer = 0;
+        Loop1:
         for (int i = 0; i<n-2; i++) {
             for (int j = i+1; j<n-1; j++) {
                 //carry 발생여부 확인 후 합계 계산
@@ -31,13 +32,14 @@ public class Main {
                         int num3 = numberList.get(k);
                         if(!isCarry(tempSum,num3)) {
                             answer = tempSum + num3;
+                            break Loop1;
                         }
                     }
                 }
             }
         }
 
-        System.out.println(answer);
+        System.out.println(answer==0?-1:answer);
     }
 
     static boolean isCarry(int num1, int num2) {
@@ -45,7 +47,6 @@ public class Main {
         int n2 = String.valueOf(num2).length();
         
         int smallNum = n1>n2?n2:n1;
-        // System.out.println(num1 + " " + num2);
 
         for (int i = 0; i<smallNum ; i++) {
             int val1 = num1 % 10;
