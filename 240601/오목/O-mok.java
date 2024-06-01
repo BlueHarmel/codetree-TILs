@@ -90,6 +90,8 @@ public class Main {
             }
         }
         System.out.println(player);
-        System.out.println((yVal+1) + " " + (xVal+1));
+        if(player != 0){
+            System.out.println((yVal+1) + " " + (xVal+1));
+        }
     }
 }
