@@ -29,9 +29,9 @@ public class Main {
             for (int j =0; j<(n-2); j++) {
                 sumVal1 = coinGridRow.get(j)+coinGridRow.get(j+1)+coinGridRow.get(j+2);
                 for (int k =(j+5>=n && i+1<n)?i+1:i;k<n;k++){
-                    coinGridRow = coinGrid.get(k);
+                    List<Integer> newCoinGridRow = coinGrid.get(k);
                     for(int l =(j+5>=n && i+1<n)?0:j+3;l<n-2;l++){
-                        sumVal2 = coinGridRow.get(l)+coinGridRow.get(l+1)+coinGridRow.get(l+2);
+                        sumVal2 = newCoinGridRow.get(l)+newCoinGridRow.get(l+1)+newCoinGridRow.get(l+2);
                         if ((sumVal1+sumVal2)>maxSumVal) {
                             maxSumVal=sumVal1+sumVal2;
                         }
