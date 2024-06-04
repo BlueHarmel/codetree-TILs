@@ -9,16 +9,16 @@ public class Main {
         int n = Integer.parseInt(stk.nextToken());
         int k = Integer.parseInt(stk.nextToken());
 
-        int[] candyArray = new int[100];
+        int[] candyArray = new int[500];
         for (int i =0 ; i<n;i++) {
             stk = new StringTokenizer(br.readLine());
             int candyNum = Integer.parseInt(stk.nextToken());
             int candyPos = Integer.parseInt(stk.nextToken());
-            candyArray[candyPos-1] += candyNum;
+            candyArray[candyPos-1+200] += candyNum;
         }
 
         int candySum = Integer.MIN_VALUE;
-        for (int i =k; i<100-k;i++){
+        for (int i =k; i<500-k;i++){
             int tempSum = 0;
             
             for (int j =i-k; j<=(i+k);j++){
@@ -26,6 +26,7 @@ public class Main {
             }
             if (candySum < tempSum){
                 candySum = tempSum;
+
             }
         }
         System.out.println(candySum);
