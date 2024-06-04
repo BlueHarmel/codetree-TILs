@@ -14,13 +14,13 @@ public class Main {
             stk = new StringTokenizer(br.readLine());
             int candyNum = Integer.parseInt(stk.nextToken());
             int candyPos = Integer.parseInt(stk.nextToken());
-            candyArray[candyPos-1] = candyNum;
+            candyArray[candyPos-1] += candyNum;
         }
 
         int candySum = Integer.MIN_VALUE;
         for (int i =k; i<100-k;i++){
             int tempSum = 0;
-
+            
             for (int j =i-k; j<=(i+k);j++){
                 tempSum+=candyArray[j];
             }
