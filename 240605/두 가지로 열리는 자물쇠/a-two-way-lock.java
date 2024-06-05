@@ -24,7 +24,7 @@ public class Main {
         for (int i =1; i<=n;i++){
             for(int j = 1;j<=n;j++){
                 for(int k=1;k<=n;k++){
-                    if (((Math.abs(i-lockPassword1[0])<=2 || Math.abs(i-lockPassword1[0])>=(n-2)) && (Math.abs(j-lockPassword1[1])<=2 || Math.abs(j-lockPassword1[1])>=(n-2)) && (Math.abs(k-lockPassword1[2])<=2) || Math.abs(k-lockPassword1[2])>=(n-2))|| ((Math.abs(i-lockPassword2[0])<=2 || Math.abs(i-lockPassword2[0])>=(n-2)) && (Math.abs(j-lockPassword2[1])<=2 || Math.abs(j-lockPassword2[1])>=(n-2)) && (Math.abs(k-lockPassword2[2])<=2) || Math.abs(k-lockPassword2[2])>=(n-2)))
+                    if (((Math.abs(i-lockPassword1[0])<=2 || Math.abs(i-lockPassword1[0])>=(n-2)) && (Math.abs(j-lockPassword1[1])<=2 || Math.abs(j-lockPassword1[1])>=(n-2)) && (Math.abs(k-lockPassword1[2])<=2 || Math.abs(k-lockPassword1[2])>=(n-2))) || ((Math.abs(i-lockPassword2[0])<=2 || Math.abs(i-lockPassword2[0])>=(n-2)) && (Math.abs(j-lockPassword2[1])<=2 || Math.abs(j-lockPassword2[1])>=(n-2)) && (Math.abs(k-lockPassword2[2])<=2 || Math.abs(k-lockPassword2[2])>=(n-2))))
                         cnt++;
                 }
             }
