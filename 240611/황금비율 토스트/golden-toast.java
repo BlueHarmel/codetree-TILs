@@ -20,7 +20,7 @@ public class Main {
 
         ListIterator<Character> breadListIt = breadList.listIterator(breadList.size());
 
-        for (int i =0 ; i<n ; i++){
+        for (int i =0 ; i<m ; i++){
             String commandLine = br.readLine();
             char command = commandLine.charAt(0);
             switch (command) {
