@@ -19,6 +19,8 @@ public class Main {
                 if(numArray[j+1]<numArray[j]){
                     numArray[j+1]=numArray[j];
                     numArray[j]=key;
+                } else{
+                    break;
                 }
             }
         }
