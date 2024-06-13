@@ -17,12 +17,8 @@ public class Main {
             int key = numArray[i];
             for (int j=i-1;j>=0;j--){
                 if(numArray[j+1]<numArray[j]){
-                    System.out.println(numArray[i]);
                     numArray[j+1]=numArray[j];
-                    System.out.println(numArray[i]);
-                } else {
-                    numArray[j+1]=key;
-                    break;
+                    numArray[j]=key;
                 }
             }
         }
