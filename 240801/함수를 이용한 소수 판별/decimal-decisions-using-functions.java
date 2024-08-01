@@ -15,6 +15,8 @@ public class Main {
 
     public static int sumAB(int a, int b){
         int sumVal = 0;
+        if (b < 2)
+            return 0;
         for(int i=a; i<=b;i++){
             if(isPrime(i)){
                 sumVal+=i;
@@ -25,7 +27,7 @@ public class Main {
 
     public static boolean isPrime(int n){
         for(int i =2; i<n;i++){
-            if(n<2||n%i==0){
+            if(n%i==0){
                 return false;
             }
         }
