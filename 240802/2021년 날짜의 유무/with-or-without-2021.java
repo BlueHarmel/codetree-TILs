@@ -15,6 +15,9 @@ public class Main {
     }
 
     public static boolean isExist(int m, int d){
+
+        if(m>12)
+            return false;
         HashMap<Integer,Integer> monthMap = new HashMap<Integer,Integer>();
         monthMap.put(1,31);
         monthMap.put(2,28);
