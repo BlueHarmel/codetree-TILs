@@ -22,15 +22,13 @@ public class Main {
             arrN2[i]=Integer.parseInt(stk.nextToken());
         }
 
-        System.out.println(isSubArr(arrN1,arrN2));
+        System.out.println(isSubArr(arrN1,arrN2)?"Yes":"No");
     }
 
     public static boolean isSubArr(int[] arr1, int[] arr2){
         for(int i =0; i<arr1.length-2;i++){
             int[] subArr = Arrays.copyOfRange(arr1,i,i+3);
-            System.out.println(subArr[0] + " " + subArr[1] + " " + subArr[2]);
-            System.out.println(arr2[0] + " " + arr2[1] + " " + arr2[2]);
-            if(subArr == arr2){
+            if(Arrays.equals(subArr,arr2)){
                 return true;
             }
         }
