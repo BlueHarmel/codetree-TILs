@@ -18,7 +18,7 @@ public class Main {
         if(isYoon(y))
             dates[1]=29;
 
-        if(!isValid(y,m,d,dates))
+        if(!isValid(m,d,dates))
             return "-1";
 
         String answer = "";
@@ -46,7 +46,7 @@ public class Main {
         return (y%4==0&&y%100!=0) || (y%4==0&&y%100==0&&y%400==0)?true:false;
     }
 
-    public static boolean isValid(int y, int m, int d, int[] dates) {
-        return m<=12||dates[m]>=d?true:false;
+    public static boolean isValid(int m, int d, int[] dates) {
+        return m<=12||dates[m-1]>=d?true:false;
     }
 }
