@@ -29,6 +29,6 @@ public class Main {
         monthMap.put(11,30);
         monthMap.put(12,31);
         
-        return monthMap.get(m)>d;
+        return monthMap.get(m)>=d;
     }
 }
