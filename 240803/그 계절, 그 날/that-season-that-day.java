@@ -47,6 +47,6 @@ public class Main {
     }
 
     public static boolean isValid(int m, int d, int[] dates) {
-        return m<=12||dates[m-1]>=d?true:false;
+        return m<=12&&dates[m-1]>=d?true:false;
     }
 }
