@@ -26,7 +26,7 @@ public class Main {
     }
 
     public static boolean isSubArr(int[] arr1, int[] arr2){
-        for(int i =0; i<arr1.length-2;i++){
+        for(int i =0; i<=arr1.length-arr2.length;i++){
             int[] subArr = Arrays.copyOfRange(arr1,i,i+arr2.length);
             if(Arrays.equals(subArr,arr2)){
                 return true;
