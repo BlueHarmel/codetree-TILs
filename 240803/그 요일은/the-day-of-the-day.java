@@ -32,6 +32,8 @@ public class Main {
 
         int dateCnt = 1;
         int answer = 0;
+        if(day.equals("Mon"))
+            answer = 1;
 
         while(true){
             if(m1==m2&&d1==d2)
