@@ -30,12 +30,25 @@ public class Main {
             }
         };
 
-        int totalDate = dates[m1]-d1 + d2 - days.get(day);
+        d1+=days.get(day);
 
-        for(int i=m1;i < m2-m1;i++){
-            totalDate+=dates[i];
+        int dateCnt = 0;
+        int answer = 1;
+
+        while(true){
+            if(m1==m2&&d1==d2)
+                break;
+            
+            dateCnt++;
+            d1++;
+            if(d1>=dates[m1]){
+                m1++;
+                d1=1;
+            }
+            if(dateCnt%7==1)
+                answer++;
         }
 
-        return totalDate/7+1;
+        return answer;
     }
 }
