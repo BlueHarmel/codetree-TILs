@@ -30,10 +30,8 @@ public class Main {
             }
         };
 
-        d1+=days.get(day);
-
-        int dateCnt = 0;
-        int answer = 1;
+        int dateCnt = 1;
+        int answer = 0;
 
         while(true){
             if(m1==m2&&d1==d2)
@@ -45,7 +43,7 @@ public class Main {
                 m1++;
                 d1=1;
             }
-            if(dateCnt%7==1)
+            if(dateCnt%7==days.get(day))
                 answer++;
         }
 
