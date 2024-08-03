@@ -30,7 +30,7 @@ public class Main {
             }
         };
 
-        int dateCnt = 1;
+        int dateCnt = 0;
         int answer = 0;
         if(day.equals("Mon"))
             answer = 1;
