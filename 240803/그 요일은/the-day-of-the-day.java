@@ -29,9 +29,10 @@ public class Main {
                 put("Sun",6);
             }
         };
+
         int totalDate = dates[m1]-d1 + d2 - days.get(day);
 
-        for(int i=0;i < m2-m1-1;i++){
+        for(int i=m1;i < m2-m1;i++){
             totalDate+=dates[i];
         }
 
