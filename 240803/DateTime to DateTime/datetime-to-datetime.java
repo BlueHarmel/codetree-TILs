@@ -17,6 +17,10 @@ public class Main {
         int minCnt = 0;
 
         while(true){
+            if(a<11||(a==11 && b<11)||(a==11 && b == 11 && c<11)){
+                minCnt=-1;    
+                break;
+            }
             if(a1==a&&b1==b&&c1==c)
                 break;
             
