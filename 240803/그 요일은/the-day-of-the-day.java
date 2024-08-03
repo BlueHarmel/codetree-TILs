@@ -41,7 +41,7 @@ public class Main {
             
             dateCnt++;
             d1++;
-            if(d1>=dates[m1]){
+            if(d1>dates[m1]){
                 m1++;
                 d1=1;
             }
