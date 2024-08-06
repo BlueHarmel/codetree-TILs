@@ -13,7 +13,7 @@ public class Main {
 
     public static String palindrome(String a) {
         String palindrome = "";
-        for(int i =0;i<a.length();i++){
+        for(int i = a.length()-1;i>=0;i--){
             palindrome += a.charAt(i);
         }
         return palindrome;
