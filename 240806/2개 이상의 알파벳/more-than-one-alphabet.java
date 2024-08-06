@@ -14,10 +14,10 @@ public class Main {
     public static boolean isDiverse(String a) {
         char prevChar=a.charAt(0);
         for(int i=1;i<a.length();i++){
-            if(a.charAt(i)==prevChar)
-                return false;
+            if(a.charAt(i)!=prevChar)
+                return true;
 
         }
-        return true;
+        return false;
     }
 }
