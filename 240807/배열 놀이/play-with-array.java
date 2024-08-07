@@ -46,6 +46,7 @@ public class Main {
                 for(int i =s;i<=e;i++){
                     System.out.print(numArr[i]+" ");
                 }
+                System.out.println();
                 break;
         }   
     }
