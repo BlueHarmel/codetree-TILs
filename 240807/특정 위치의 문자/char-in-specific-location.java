@@ -15,6 +15,10 @@ public class Main {
                     System.out.println(i);
                     break;
                 }
+            if(i==charArr.length-1){
+                System.out.println("None");
+            }
         }
+
     }
 }
