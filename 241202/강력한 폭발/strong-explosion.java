@@ -55,7 +55,7 @@ public class Main {
             int[] pos = bombPos.get(i);
             if (bombType[i] == 0) {
                 for (int j = -2; j <= 2; j++) {
-                    int newY = pos[0] + i;
+                    int newY = pos[0] + j;
                     if (0 <= newY && newY < n && exploded[newY][pos[1]] == false) {
                         exploded[newY][pos[1]] = true;
                     }
