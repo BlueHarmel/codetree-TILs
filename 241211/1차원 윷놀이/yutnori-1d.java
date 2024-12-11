@@ -14,7 +14,7 @@ public class Main {
 
         StringTokenizer st = new StringTokenizer(br.readLine());
         n = Integer.parseInt(st.nextToken()); // 턴의 횟수
-        m = Integer.parseInt(st.nextToken()); // 윷놀이 판의 길이
+        m = Integer.parseInt(st.nextToken())-1; // 윷놀이 판의 길이
         k = Integer.parseInt(st.nextToken()); // 말의 갯수
 
         pos = new int[k];
@@ -40,15 +40,16 @@ public class Main {
         }
 
         for(int i=0;i<k;i++){
-            if(pos[i]>=m){
-                continue;
-            }
-
+            int prevPos = pos[i];
             pos[i]+=turn[depth];
-            if(pos[i]>=m){
-                currScore++;
+
+            int scoreIncrease = 0;
+            if (pos[i] >= m && prevPos < m) {
+                scoreIncrease = 1;
             }
-            backtracking(depth+1,currScore);
+            backtracking(depth+1,currScore+scoreIncrease);
+
+            pos[i] = prevPos;
         }
     }
 }
