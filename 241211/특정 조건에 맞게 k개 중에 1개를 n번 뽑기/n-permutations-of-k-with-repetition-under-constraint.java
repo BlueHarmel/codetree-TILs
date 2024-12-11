@@ -9,12 +9,12 @@ import java.util.*;
 public class Main {
     static int k,n;
     static int[] numArr;
-    static StringBuilder sb = new StringBuilder();
+    static BufferedWriter bw;
 
     public static void main(String[] args) throws IOException {
         // 여기에 코드를 작성해주세요.
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
         StringTokenizer stk = new StringTokenizer(br.readLine());
 
@@ -25,18 +25,17 @@ public class Main {
 
         backtracking(0);
 
-        bw.write(sb.toString());
         bw.flush();
         bw.close();
         br.close();
     }
 
-    private static void backtracking(int depth){
+    private static void backtracking(int depth) throws IOException {
         if(depth == n){
             for(int num:numArr){
-                sb.append(num).append(" ");
+                bw.write(num+" ");
             }
-            sb.append("\n");
+            bw.newLine();
 
             return;
         }
