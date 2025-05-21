@@ -12,12 +12,12 @@ public class Main {
         // Please write your code here.
 
         int totalDays1 = d1;
-        for(int i =0;i<m1;i++){
+        for(int i =0;i<m1-1;i++){
             totalDays1+=daysOfMonth[i];
         }
 
         int totalDays2 = d2;
-        for(int i =0;i<m2;i++){
+        for(int i =0;i<m2-1;i++){
             totalDays2+= daysOfMonth[i];
         }
 
