@@ -9,7 +9,7 @@ public class Main {
 
         int endDate = (A*24*60 + B*60 + C);
         int startDate = (11*24*60 + 11*60 + 11);
-
-        System.out.println(endDate-startDate);
+        int answer = endDate-startDate<0?-1:endDate-startDate;
+        System.out.println(answer);
     }
 }
