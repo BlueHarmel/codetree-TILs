@@ -14,23 +14,22 @@ public class Main {
         String A = sc.next();
         // Please write your code here.
 
-        int days1 = d1;
+        int start = d1;
         for(int i =1;i<m1;i++){
-            days1 += daysOfMonth[i];
+            start += daysOfMonth[i];
         }
 
-        for(int i =0;i<dates.length;i++){
-            if(dates[i].equals(A)){
-                days1 += i;
-            }
-        }
-
-        int days2 = d2;
+        int end = d2;
         for(int i =1;i<m2;i++){
-            days2 += daysOfMonth[i];
+            end += daysOfMonth[i];
         }
 
-        System.out.println((days2-days1)/7+1);
+        int count = 0;
+        for(int day = start; day <= end; day++) {
+            int weekIdx = (day - start) % 7; // 0:월, 1:화, ..., 6:일
+            if(dates[weekIdx].equals(A)) count++;
+        }
 
+        System.out.println(count);
     }
 }
