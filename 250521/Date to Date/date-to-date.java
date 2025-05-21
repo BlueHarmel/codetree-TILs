@@ -21,6 +21,6 @@ public class Main {
             totalDays2+= daysOfMonth[i];
         }
 
-        System.out.println(totalDays2 - totalDays1);
+        System.out.println(totalDays2 - totalDays1+1);
     }
 }
