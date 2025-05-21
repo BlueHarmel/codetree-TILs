@@ -22,8 +22,8 @@ public class Main {
             totalDays2 += daysOfMonth[i];
         }
 
-        int index = (totalDays2-totalDays1+7)%7;
+        int index = (totalDays2-totalDays1)%7;
 
-        System.out.println(dates[index]);
+        System.out.println(index<0?dates[index+7]:dates[index]);
     }
 }
